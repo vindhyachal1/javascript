@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON to Table</title>
+</head>
+<body>
+    <table id="myTable"></table>
+
+    <script>
+        var data = [
+            { "name": "John", "age": 31, "city": "New York" },
+            { "name": "Mary", "age": 27, "city": "Los Angeles" },
+            { "name": "Peter", "age": 28, "city": "Chicago" }
+        ];
+
+        var table = document.getElementById("myTable");
+
+        var header = table.createTHead();
+        var row = header.insertRow(0);
+        for (var key in data[0]) {
+            var th = document.createElement("th");
+            var text = document.createTextNode(key);
+            th.appendChild(text);
+            row.appendChild(th);
+        }
+
+        var body = table.createTBody();
+        for (var i = 0; i < data.length; i++) {
+            var row = body.insertRow(i);
+            for (var key in data[i]) {
+                var cell = row.insertCell(-1);
+                cell.innerHTML = data[i][key];
+            }
+        }
+    </script>
+</body>
+</html>
