@@ -1,0 +1,10 @@
+To deploy Spring Batch on two different servers so that file processing will be in sync between them and there will be no duplicate work, you can use remote partitioning1. Remote partitioning is a technique where a single job is split into multiple partitions that can be executed in parallel across multiple JVMs. Each partition runs on a separate JVM instance and communicates with the other partitions using a messaging middleware such as JMS1.
+
+Here are some steps you can follow to deploy Spring Batch on two different servers:
+
+Create a master node that will control the job execution and partitioning.
+Create two or more worker nodes that will execute the partitions.
+Configure the master node to use remote partitioning.
+Configure the worker nodes to use remote chunking.
+Use a messaging middleware such as JMS to communicate between the master and worker nodes.
+You can find more details about remote partitioning in Spring Batch in this link1.
