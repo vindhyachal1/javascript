@@ -7,4 +7,4 @@ Create two or more worker nodes that will execute the partitions.
 Configure the master node to use remote partitioning.
 Configure the worker nodes to use remote chunking.
 Use a messaging middleware such as JMS to communicate between the master and worker nodes.
-You can find more details about remote partitioning in Spring Batch in this link1.
+You can find more details about remote partitioning in Spring Batch in this link1. 
